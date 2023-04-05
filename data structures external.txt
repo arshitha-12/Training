@@ -1,0 +1,472 @@
+DATA STRUCTURES
+
+Throwing an exception manually
+import java.
+public static void main(String[]args){
+Scanner sc=new Scanner(System.in);
+try{
+int age=sc.nextIn();
+if(age<18){
+throw new Exception(message:"age under 18");
+}
+else{
+//continue execution
+
+}
+System.out.println(x:"Valid age");
+} catch(Exception e){
+System.out.println(e.getmessage());
+  }
+ }
+}
+collection frameworks in java
+list-arraylist
+map-hashmap,linkedhashmap,treemap
+set-hashset,linkedhashset,treeset
+collection(as object)
+14-03-23
+data structures
+Arraylist (adding elements)
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList<Integer> arr=new ArrayList<Integer>();
+		arr.add(19);
+		arr.add(23);
+		arr.add(07);
+		System.out.println(arr);
+		
+		
+	}
+}
+how to implement stack using java
+1.create a class named stack
+2.push/add elements to the stack
+3.pop/remove elements from the stack
+3.use peek function to know the top element
+4.check whether the stack isEmpty or not
+5.check the overflow and underflow conditions
+to reverse the elements in the stack after popping out the elements add them into new tscak and print the new stack where we added the popped elemnts so that it prints in reverse order.
+Applications of stack
+1.browsing history...etc
+2.books arranged in a self
+Queue-FIFO(first in first out)
+1.Buying tickets in a queue.
+if an element is removed then -1 is used for its representation.
+if the size the array is fixed and some of elements are removed then we cannot add elements though they are removed so that to overcome this we use arraylist
+Linked List-
+data part
+address part
+linked list stores both memory address and data (imp).
+accessing elements from list is difficult compared to array.
+searching does not makes any difference in both linke list and array.
+insertion,deletion and adding elemnts is easy in array compared to linked list.
+it is a linear datastructure it stores in continuous order and it also connected/linked to next node to point the address.
+trees-
+inorder-left-root-right
+preorder-root-left-right
+postorder-left-right-root
+21-03-23-python oops concept
+There are no interfaces in python like java.variables inside the class are called as class variables.to print inside the class then use self.function and to print outside the class use ob.variable and if we given elf.variable in the function then it prints the class variable.when we dont give class variables but given in the constructor by using self we can access the variable and also it automatically shifts to classs variable.Each object is independent of the other.when we declare array without using self then it acts as global scope
+class student():
+    def __init__(self):
+        self.arr=[]
+    def add_ele(value):
+        self.arr.append(value)
+ob1=student()
+ob1.add_ele(1)
+ob1.add_ele(2)
+ob1.add_ele(3)
+ob2=student()
+ob2.add_ele(19)
+print(self.arr)
+a=[1,2,3]
+b=a
+b[0]=100
+print(a)#a=[100,2,3]==b output
+print(b)
+a=[1,2,3]
+b=a.copy()
+b[0]=100
+print(a)#a=[1,2,3] and b=[100,2,3]output
+print(b)
+class bike:------my code
+    def __init__(self):
+        self.dict={}
+    def add_ele(self,name,model,year):
+        self.name=name
+        self.model=model
+        self.year=year
+    def getbike(self):
+        self[name]="HeroHonda"
+        self[model]= 12AS4
+        self[year]=1998
+print(self.getbike())
+inheritance- likewise in java except (multilevel) inheritance which is supported in python.
+class A:
+     def message(self):
+          print("In class A")
+class B(A):
+      def message(self):
+           print("In class B")---single level
+class A:
+        def message_a(self):
+            print("In class A")
+class B(A):
+         def message_b(self):
+              print("In class B")
+class C(B):
+        def message_c(self)
+            print("In class C")----multilevel inheritance
+hirerachial inheritance
+class A:
+      def message_a(self):
+           print("In class A")
+class B(A):
+       def message_b(self):
+            print("In class B")
+class C(A):
+        def message_c(self):
+            print("In class C")
+multiple inheritance
+class parent_one:
+        def message(self):
+            print("In class one")
+class parent_two:
+        def message(self):
+           print("In class two")
+class child(parent_one,parent_two):
+     pass
+ob.child()
+ob.message()
+polymorphism-
+class A:
+       def message(self):
+            print("message")
+       def message(self,data):
+           print("message with data")
+ob=A()
+ob.message()
+only first parameter supports in python and it accepts latest definition(overriding).should give braces in lhs should give to the classs.
+class A:
+    def greeting(self):
+        print("Good afternoon!")
+    def greeting(self,value):
+        print("hehehe")
+ob=A()
+ob.greeting(12)
+output-hehehe
+abstract classes- abstraction is a method which has declaration but no definition.class A:
+    def method_one(self):#though it has no definition it is not a abstarct method 
+        pass #still it is a normal method
+ob=A()
+ob.method_one()
+from abc import ABC,abstractmethod
+class X(ABC):
+    @abstractmethod
+    def Y(self): 
+        pass
+ob=X()
+ob.Y()
+we cannot create/instantiate an object in abstraction class
+from abc import ABC,abstractmethod
+class X(ABC):
+    @abstractmethod
+    def Y(self): 
+        print("wohooo")#if we dont override then it cannot instantiate as we overrided it it doesnot print the statement
+        
+class chinnu(X):
+    def Y(self):
+       print("wohooo")
+ob=chinnu()
+ob.Y()
+abstract method should not have body  and it gives error in java and it doesnot in python because we dont have abstract keyword likewise in java
+class Node:
+    def __init__(self,value):
+        self.data=value
+        self.left=None
+        self.right=None
+class Tree:
+    def add_ele(self,root,value):
+    def inorder(self,root):
+        if root.left!=None:
+            self.inorder(root.left)
+            print(root.data)
+            if root.right!=None:
+                self.inorder(root.right)
+                print(root.data)
+        new_Node=Node(value)
+        if value<root.data:
+            if root.data==None:
+                root.left=new_Node
+        else:
+            self.add_ele(root.left,value)
+            else:
+                pass
+        if value>root.data:
+            if root.data==None:
+                root.right=new_Node:
+        else:
+            self.add_ele(root.right,value)
+            else:
+                pass
+            
+root Node(20)
+28-03-23
+def level_order(self,root):#levelorder works for both trees and graphs 
+    q=[root]
+    while len(q)!=0:
+        ele=q.pop(0)
+        print(ele.data)
+        if ele.left!=none:
+            q.append(ele.left)
+        if ele.right!=none:
+            q.append(ele.right)
+
+
+---------------------------------------------
+class Node:
+    def __init__(self,value):
+        self.data=value
+        self.left=None
+        self.right=None
+class Tree:
+    def add_ele(self,root,value):
+        new_Node=Node(value)
+        if value<root.data:
+            if root.left==None:
+                root.left=new_Node
+            else:
+                self.add_ele(root.left,value)
+            
+        elif value>root.data:
+            if root.right==None:
+                root.right=new_Node
+            else:
+                self.add_ele(root.right,value)
+            
+    def inorder(self,root):
+        if root.left!=None:
+            self.inorder(root.left)
+        print(root.data)
+        if root.right!=None:
+            self.inorder(root.right)
+    def pre_order(self,root):
+        print(root.data)
+        if root.left!=None:
+            self.inorder(root.left)
+        if root.right!=None:
+            self.inorder(root.right)
+    def post_order(self,root):
+        
+        if root.left!=None:
+            self.inorder(root.left)
+        if root.right!=None:
+            self.inorder(root.right)
+        print(root.data)   
+
+#28-03-23
+    def level_order(self,root):#levelorder works for both trees and graphs 
+        q=[root]
+        while len(q)!=0:
+            ele=q.pop(0)
+            print(ele.data)
+            if ele.left!=None:
+                q.append(ele.left)
+            if ele.right!=None:
+                q.append(ele.right)
+            
+
+            
+ob=Tree()
+root=Node(10)
+ob.add_ele(root,5)
+ob.add_ele(root,15)
+ob.add_ele(root,2)
+ob.add_ele(root,6)
+ob.add_ele(root,12)
+ob.add_ele(root,17)
+#ob.pre_order(root)
+#ob.inorder(root)
+#ob.post_order(root)            
+#ob.level_order(root)               
+
+
+-------------------------------
+
+level order---bfs
+
+dictionary representation for graphs
+   from:to
+two types of traversal:
+    BFS(breath first search)----> stack
+    DFS(depth first search)---->queue
+tree---need to start from root
+graph--can start from any node
+
+BFS
+
+def bfs(d,start):
+    q=[start]
+    vis=[start]
+    while len(q)!=0:
+        ele=q.pop(0)
+        print(ele)
+        for i in d[ele]:
+            if i not in vis:
+                q.append(i)
+                vis.append(i)
+
+
+d={10:[20,40,50],
+   20:[10,40],
+   30:[40,50],
+   40:[10,20,30,50],
+   50:[10,40,30]}
+
+bfs(d,20)
+
+
+----------------------------------------------------
+
+user input access
+
+
+
+def bfs(d,start):
+    q=[start]
+    vis=[start]
+    while len(q)!=0:
+        ele=q.pop(0)
+        print(ele)
+        for i in d[ele]:
+            if i not in vis:
+                q.append(i)
+                vis.append(i)
+
+
+d={}
+l=int(input("enter length of dict:"))
+for i in range(l):
+    k=int(input('enter key value:'))
+    v=[int(x) for x in input("enter value list:").split()]
+    d[k]=v
+
+bfs(d,20)
+
+---------------------------------------------------------
+DFS
+
+def dfs(d,start,vis=None):
+    if vis==None:
+        vis=[]
+    vis.append(start)
+    print(start)
+    for i in d[start]:
+        if i not in vis:
+            vis.append(i)
+            dfs(d,i,vis)
+            
+d={10:[20,40,50],
+   20:[10,40],
+   30:[40,50],
+   40:[10,20,30,50],
+   50:[10,40,30]}
+
+dfs(d,20)
+WEB DEVELOPMENT-04--4-23
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equi="X-UA-Compatible" content ="IE-edge">
+        <meta name ="view port" content="width=device-width,intial-scale=1.0">
+        <meta name="description" content="Learning webdevelopment">
+        <meta name="keywords" content="don't give up">
+        <title>
+            Hello Harry
+        </title>
+        <meta>
+        <link href="C:\Users\Arshi\OneDrive\Documents\cssE.css">
+
+    </head>
+    <body>
+
+    <img src="C:\Users\Arshi\OneDrive\Pictures\download.jpeg"=alt="Harry porter" width="600" height="500" >
+    <button>get lost</button>
+
+        <p>This is not hogwarts</p>
+        <h2>SUNNY</h2>
+        <b>arshitha</b>
+        <b>bangaraiahgari</b>
+        <p>This is IARE</p>
+        <i>Karunakar Reddy</i>
+
+    </body>
+</html>
+<body>
+
+        <div id="header" >
+
+        </div>
+        <div id="banner" style="display:flex;">
+            <div id="left" style="">
+                <div>
+                    <img src="C:\Users\Arshi\OneDrive\Pictures\download.jpeg" alt="">
+
+
+                </div>
+            </div>
+            <div id="right">
+                <h2>Welcome Harry!</h2>
+                <button>got it</button>
+            </div>
+        </div>
+
+
+
+
+<body>
+<video height="300px" width="100%" autoplay controls>
+<source src="path mp4 file"----video link
+</video>
+<audio src="path to audio file" controls></audio>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

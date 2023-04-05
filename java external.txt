@@ -1,0 +1,265 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    int arr[]=new int[size];
+	 //char arr[]=new char[2];
+	/* arr[0]=2;
+	 arr[1]=4;
+	 arr[2]=6;*/
+	 for(int i=0;i<size;i++){
+	     arr[i]=sc.nextInt();
+	 }
+	      for(int i=0;i<size;i++){
+	    System.out.println(arr[i]);
+	 }
+	}
+}
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int size=sc.nextInt();
+	    char arr[]={'A','R','S','H','U'};
+	    for(int i=0;i<arr.length;i++){
+	        System.out.println(arr[i]);
+	    }
+	}
+}
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String x[]={"a19@iare.com,a17@iare.com,a02@iare.com,arshu@gmail.com"};
+	    for(String email:x){
+	        String y[]=email.split("@");
+	        if(y[1].equalsIgnoreCase("iare.com")){
+	            System.out.println(y[3]);
+	         }
+	        else{
+	            System.out.println("gmail.com");
+	            
+	        
+	    }
+	        
+	            
+	        }
+	    
+	    
+	}
+}
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String x="arshitha reddy";
+	    System.out.println(x.contains("reddy"));
+	}
+}
+//palindrome problem java
+int num=123;
+int rev=0;
+while(num>0){
+       int remainder=num%10;
+       rev=rev*10+remainder;
+       num=num/10;
+}
+System.out.println(rev);
+21-02-2023
+object-oriented programming (java)
+write everything(logical part) inside the method and call a method outside the method(compare etc...)
+if public is not defined by default it is public class itself but to declare it as a private we have to specify with'private'
+import java.util.*;
+class instagram{
+     string username="-----";
+private string password="------";
+}
+public void updatepassword(string newpassword){
+   password =new password;---(after updating it prints old password)
+}
+public string getpassword(){
+     return password;-----(gets error in the output)
+}
+public class sample{
+public static void main(string[] args){
+ instagram s1=new instagram();
+system.out.println(s1.username);
+system.out.println(s1.password);
+  }
+}
+getters and setters(vip)-how to access private variables outside the class(main funda)
+those are methods ,we cannot use password directly in any case including getters and setters it must be inside the class.
+if we want to access the private method then you have to create public class and then call the function in to that class by using getter method.
+update password is public and get password is protected then it gives error
+class is a blueprint /it is a collection of properties of entity
+encapsulation-properties in a class(by using packages we encapsulate multiple classes)
+scanner is not a package its a class and util is a package 
+exception handling-(even though the code is written perfectly you may not able to find the errors so that this concept helps in finding error)[we can have n no of catch blocks but only one try block and one finally block]
+try{write code in which you cant find error}catch(exception(if name is not known))[method]
+we cannot leave program in middle it should be finished so that we use finally block (if there is error or no error thr finally block will be executed)
+import java.util.Scanner;
+public class sample(
+    public static void main(string[] args){
+      Scanner s=new Scanner(System.in);
+      int a=s.nextint();
+      int b=s.nextint();
+   try{//nested try is ok upto 2 or 3 later on it would be difficult for catch block //
+    System.out.println(a/b);
+}
+catch(exception name){
+   system.out.println(x:"oops buddy,you ran into an error");
+}
+finally{}
+constructors-it is a method executed when the object is created(executed by default)
+they has no written types and the name of the constructor is as same as class name.they are of 2 types parameterized,default constructors.we can have multiple constructors based on the object created.creation of a new constructor doesnot effect on the another.this keyword is used to access/current object class variables when the variables are not given in the class.if the values are not present in the local scope then it verifies in the global scope and then prints them out.we cannot(because of global and local scopes) write function in a function in the case of java.dynamic array is created by using array list which is the subclass of a list.
+
+28-02-2023
+bike manufacturing problem by creating classes and checking whether the bike is available or not
+Inheritance-There are five types of inheritance.It acquires properties from parent class
+1.Single inheritance
+2.Multilevel inheritance
+3.Hierarchial inheritance
+4.Multiple inheritance(not supported)
+5.Hybrid inheritance(combination of any two inheritances)
+class A{
+    String name="in class A";
+    public void main(){
+        System.out.println("Welcome to class A");
+    }
+    
+}
+class B extends A{
+    
+}
+public class sample{
+    public static void main(String[]args){
+        B ob=new B();
+        System.out.println(ob.name);
+        ob.main();
+    }
+}
+class karunakar{
+    String name="karunakar";
+    public void head(){
+        System.out.println("Welcome to home");
+    }
+}
+class arshitha extends karunakar{
+    String name="arshitha";
+    public void daughter(){
+        System.out.println("hehe");
+    }
+}
+class mokseshwar extends karunakar{
+    String name="mokseshwar";
+    public void son(){
+        System.out.println("booo");
+    }
+}
+public class main{
+    public static void main(String[]args){
+        mokseshwar ob=new mokseshwar();
+        ob.son();
+        System.out.println(ob.name);
+    }
+}
+interface A{
+    float pi=3.14f;
+    public void head();
+    public void dead();
+    
+}
+interface B{
+    public void dead();
+    
+}
+class C implements A,B{
+    public void dead(){
+        System.out.println("booo");
+    }
+    public void head(){
+        
+    }
+}
+
+public class main{
+    public static void main(String[]args){
+        C ob=new C();
+        ob.dead();
+    }
+}
+Polymorphism-same method producing different outputs
+example-dog barks and cat says meow (same method of speaking with different sounds)
+compile time polymorphism-method overloading(same class,same method but different signature)
+run time polymorphism-method overriding(same method and same method of signature but present in different class)
+class animal{
+    public int add(int a,int b){
+        return a+b;
+    }
+    public int add(int a,int b,int c){
+        return a+b+c;
+    }
+    public String add(String 1,String 2){
+        return 1+2;
+    }
+class shape{
+    public void area();
+    public void perimeter();
+    
+}
+class square{
+    public void area();
+    String name="s";
+    System.out.println("s*s");
+    
+}
+class circle{
+    public void area();
+    String name="r";
+    System.out.println("2*pi*r")
+    public void perimeter{
+        
+    }
+    
+}
+public class main{
+    public static void main(String[]args){
+        square ob=new square();
+        ob.area();
+    }
+    
+}
+public class main{
+    public static void main(String[]args){
+        animal A=new animal();
+        System.out.println(A.add(a:20,b:30));
+        System.out.println(A.add(a:10,b:10,c:10));
+        System.out.println(A.add(1:"Hi!",2:"Arshu"))
+    }    
+}
+Abstraction-hiding critical information(hiding the functionality from end users)
+In abstract method it should not have body likewise in interface(final,staticand cannot create object)
+In abstract we can have finite,final,static and normal methods also ,object cannot be created
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+	        
+	    
+	    
